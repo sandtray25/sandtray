@@ -15,13 +15,13 @@ export default function Home() {
             height={38}
             priority
           />
-          <h1 className="text-4xl font-bold">Next.js + shadcn/ui</h1>
+          <h1 className="text-4xl font-bold">Next.js + shadcn/ui + MCP</h1>
           <p className="text-muted-foreground">
-            Next.js 15와 shadcn/ui가 성공적으로 설치되었습니다!
+            Next.js 15, shadcn/ui, GitHub/Vercel MCP Server, Web Analytics가 모두 설치되었습니다!
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <Card>
             <CardHeader>
               <CardTitle>🚀 Next.js 15</CardTitle>
@@ -52,6 +52,23 @@ export default function Home() {
                 <li>✅ 완전 커스터마이징 가능</li>
                 <li>✅ 다크 모드 지원</li>
                 <li>✅ TypeScript 지원</li>
+              </ul>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle>📊 Vercel Analytics</CardTitle>
+              <CardDescription>
+                실시간 웹 분석 및 성능 모니터링 도구입니다.
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <ul className="space-y-2 text-sm">
+                <li>✅ Web Analytics</li>
+                <li>✅ Speed Insights</li>
+                <li>✅ 실시간 데이터</li>
+                <li>✅ 성능 최적화 힌트</li>
               </ul>
             </CardContent>
           </Card>

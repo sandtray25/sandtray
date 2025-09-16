@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { FileUpload } from "@/components/ui/file-upload";
 
 export default function Home() {
   return (
@@ -15,9 +16,9 @@ export default function Home() {
             height={38}
             priority
           />
-          <h1 className="text-4xl font-bold">Next.js + shadcn/ui + MCP</h1>
+          <h1 className="text-4xl font-bold">Next.js + shadcn/ui + MCP + R2</h1>
           <p className="text-muted-foreground">
-            Next.js 15, shadcn/ui, GitHub/Vercel MCP Server, Web Analytics가 모두 설치되었습니다!
+            Next.js 15, shadcn/ui, GitHub/Vercel MCP Server, Web Analytics, Cloudflare R2가 모두 설치되었습니다!
           </p>
         </div>
 
@@ -72,6 +73,23 @@ export default function Home() {
               </ul>
             </CardContent>
           </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle>☁️ Cloudflare R2</CardTitle>
+              <CardDescription>
+                S3 호환 오브젝트 스토리지 서비스입니다.
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <ul className="space-y-2 text-sm">
+                <li>✅ S3 호환 API</li>
+                <li>✅ 무료 송신 트래픽</li>
+                <li>✅ 글로벌 CDN</li>
+                <li>✅ 파일 업로드/다운로드</li>
+              </ul>
+            </CardContent>
+          </Card>
         </div>
 
         <div className="text-center space-y-4">
@@ -86,6 +104,11 @@ export default function Home() {
           </div>
         </div>
 
+        <div className="space-y-8">
+          <h2 className="text-2xl font-bold text-center">Cloudflare R2 파일 스토리지 테스트</h2>
+          <FileUpload maxSizeMB={10} />
+        </div>
+
         <Card className="text-center">
           <CardHeader>
             <CardTitle>다음 단계</CardTitle>
@@ -94,14 +117,14 @@ export default function Home() {
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
               <Button variant="outline" asChild>
                 <a 
                   href="https://ui.shadcn.com/docs/components" 
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
-                  컴포넌트 문서
+                  shadcn/ui 문서
                 </a>
               </Button>
               <Button variant="outline" asChild>
@@ -115,11 +138,20 @@ export default function Home() {
               </Button>
               <Button variant="outline" asChild>
                 <a 
-                  href="https://tailwindcss.com/docs" 
+                  href="https://developers.cloudflare.com/r2/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
-                  Tailwind 문서
+                  Cloudflare R2 문서
+                </a>
+              </Button>
+              <Button variant="outline" asChild>
+                <a 
+                  href="https://vercel.com/docs/analytics" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  Vercel Analytics
                 </a>
               </Button>
             </div>
